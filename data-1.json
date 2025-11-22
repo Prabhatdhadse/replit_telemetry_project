@@ -1,0 +1,12 @@
+[
+  {
+    "device": "sensor-A",
+    "time": "2024-01-01T10:00:00Z",
+    "value": 42
+  },
+  {
+    "device": "sensor-B",
+    "time": "2024-01-01T10:05:00Z",
+    "value": 55
+  }
+]
