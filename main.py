@@ -5,6 +5,7 @@ from datetime import datetime
 # Convert ISO timestamp → milliseconds
 # Example: "2024-01-01T10:00:00Z" → 1704103200000
 # ----------------------------------------------------
+
 def convert_timestamp(ts_iso: str) -> int:
     # Parse ISO string to datetime object (UTC)
     dt = datetime.strptime(ts_iso, "%Y-%m-%dT%H:%M:%SZ")
@@ -15,6 +16,7 @@ def convert_timestamp(ts_iso: str) -> int:
 # Convert any record (data-1 or data-2) → unified format
 # Target format = { "device": ..., "timestamp_ms": ..., "value": ... }
 # ----------------------------------------------------
+
 def unify_format(record: dict) -> dict:
 
     # Case 1: data-1.json format → has "time"
@@ -37,8 +39,8 @@ def unify_format(record: dict) -> dict:
     else:
         raise ValueError("Unknown data format detected.")
 
-# ----------------------------------------------------
+
 # Example check (Not part of automatic tests)
-# ----------------------------------------------------
+
 if __name__ == "__main__":
     print("Functions loaded successfully. Run tests on Replit.")
